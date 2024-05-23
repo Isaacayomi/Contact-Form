@@ -1,52 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Contact form</title>
 
-  Contact Us
+    <link rel="stylesheet" href="style.css" />
 
-  First Name
-  This field is required
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="heading">Contact Us</h1>
 
-  Last Name
-  This field is required
+      <form>
+        <label for="firstname"
+          >First Name
+          <img src="./assets/images/Required.png" alt="asterick" />
+        </label>
+        <input type="name" id="firstname" name="firstname" required />
+        <p class="error__msg">This field is required</p>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+        <label for="firstname"
+          >Last Name
+          <img src="./assets/images/Required.png" alt="asterick" />
+        </label>
+        <input type="name" id="lastname" name="lastname" required />
+        <p class="error__msg">This field is required</p>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+        <label for="firstname"
+          >Email Address
+          <img src="./assets/images/Required.png" alt="asterick" />
+        </label>
+        <input type="email" id="email" name="email" required />
+        <p class="error__msg">Please enter a valid email address</p>
 
-  Message
-  This field is required
+        <label for="query"
+          >Query Type
+          <img src="./assets/images/Required.png" alt="asterick" />
+        </label>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+        <div class="query__section">
+          <label class="enquiry">
+            <input
+              type="radio"
+              name="enquiry"
+              value="general enquiry"
+              class="enquiry__input"
+            />
+            General Enquiry
+          </label>
+          <br />
+          <label class="enquiry">
+            <input
+              type="radio"
+              name="enquiry"
+              value="support enquiry"
+              class="enquiry__input"
+            />
+            Support Enquiry
+          </label>
+          <p class="error__msg">Please select a query type</p>
+        </div>
 
-  Submit
+        <label for="message"
+          >Message
+          <img src="./assets/images/Required.png" alt="asterick" />
+        </label>
+        <input type="text" name="messageBox" class="messageInput" required />
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="consent__section">
+          <div class="consent">
+            <input type="checkbox" />
+            <p>I consent to being contacted by the team</p>
+          </div>
+          <p class="error__msg">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+
+        <input type="submit" value="Submit" class="submitBtn"/>
+      </form>
+    </main>
+
+    <!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+
+    <script src="script.js"></script>
+  </body>
 </html>
