@@ -31,22 +31,22 @@
           >First Name
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <input type="name" id="firstname" name="firstname" required />
-        <p class="error__msg">This field is required</p>
+        <input type="name" id="firstname" name="firstname" />
+        <p class="error__msg firstname__error">This field is required</p>
 
-        <label for="firstname"
+        <label for="lastname"
           >Last Name
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <input type="name" id="lastname" name="lastname" required />
-        <p class="error__msg">This field is required</p>
+        <input type="name" id="lastname" name="lastname"  />
+        <p class="error__msg lastname__error">This field is required</p>
 
-        <label for="firstname"
+        <label for="email"
           >Email Address
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <input type="email" id="email" name="email" required />
-        <p class="error__msg">Please enter a valid email address</p>
+        <input type="email" id="email" name="email"  />
+        <p class="error__msg email__error">Please enter a valid email address</p>
 
         <label for="query"
           >Query Type
@@ -80,8 +80,7 @@
           >Message
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <input type="text" name="messageBox" class="messageInput" required />
-
+        <textarea name="messageBox" class="messageInput" cols="30" rows="10"></textarea>
         <div class="consent__section">
           <div class="consent">
             <input type="checkbox" />
