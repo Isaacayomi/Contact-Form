@@ -202,11 +202,14 @@ input.submitBtn {
 }
 
 @media screen and (min-width: 690px) {
+  body {
+    position: relative;
+  }
+
   main {
     max-width: 43.125rem;
     width: 100%;
     margin-inline: auto;
-    margin-block: 8rem;
     padding-bottom: 2.5rem;
   }
 
@@ -245,12 +248,10 @@ input.submitBtn {
   textarea {
     max-width: 39.5rem;
     width: 100%;
-    /* margin-inline: 2.5rem; */
   }
 
   .consent {
     margin-top: -1.5rem;
-    /* margin-bottom: 1.5rem; */
   }
 
   .consent p {
@@ -269,5 +270,13 @@ input.submitBtn {
     width: 100%;
     margin-top: 1.5rem;
     margin-inline: auto;
+  }
+
+  .toast {
+    max-width: 28.125rem;
+    width: 100%;
+    margin-inline: auto;
+    position: absolute;
+    top: -11%;
   }
 }
