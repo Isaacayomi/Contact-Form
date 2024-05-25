@@ -69,6 +69,9 @@ const validateMessageField = () => {
     messageErr.style.display = "block";
     messageErr.style.marginBottom = "1.5rem";
     messageErr.style.marginTop = "-2.5rem";
+  } else {
+    messageErr.style.display = "none";
+    messageErr.style.marginBottom = 0;
   }
 };
 
@@ -78,7 +81,6 @@ const validateCheckBox = () => {
     consentErr.style.marginBottom = "1.5rem";
   } else {
     consentErr.style.display = "none";
-    consentErr.style.marginBottom = 0;
   }
 };
 
@@ -91,7 +93,20 @@ const validateFields = () => {
   validateCheckBox();
 };
 
+//Event Listeners
+consent.addEventListener("click", () => {
+  consent.style.accentColor = "#0c7d69";
+});
+
 submit.addEventListener("click", function (e) {
   e.preventDefault();
-  validateFields();
+  if (validateFields) {
+    document.querySelector(".toast").style.display = "block";
+
+    // Remove toast after 5 seconds
+    setTimeout(function () {
+      document.querySelector(".toast").style.display = "none";
+
+    }, 3000);
+  }
 });

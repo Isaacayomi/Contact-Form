@@ -38,15 +38,17 @@
           >Last Name
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <input type="name" id="lastname" name="lastname"  />
+        <input type="name" id="lastname" name="lastname" />
         <p class="error__msg lastname__error">This field is required</p>
 
         <label for="email"
           >Email Address
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <input type="email" id="email" name="email"  />
-        <p class="error__msg email__error">Please enter a valid email address</p>
+        <input type="email" id="email" name="email" />
+        <p class="error__msg email__error">
+          Please enter a valid email address
+        </p>
 
         <label for="query"
           >Query Type
@@ -80,7 +82,12 @@
           >Message
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <textarea name="messageBox" class="message__input" cols="30" rows="10"></textarea>
+        <textarea
+          name="messageBox"
+          class="message__input"
+          cols="30"
+          rows="10"
+        ></textarea>
         <p class="error__msg message__error">This field is required</p>
         <div class="consent__section">
           <div class="consent">
@@ -92,12 +99,20 @@
           </p>
         </div>
 
-        <input type="submit" value="Submit" class="submitBtn"/>
+        <input type="submit" value="Submit" class="submitBtn" />
       </form>
+      <div class="toast">
+        <div class="confirmation__field">
+          <img
+            src="./assets/images/icon-success-check.svg"
+            alt="success check"
+          />
+          <p class="message__sent">Message Sent!</p>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
     </main>
 
-    <!-- Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
 
     <script src="script.js"></script>
   </body>
