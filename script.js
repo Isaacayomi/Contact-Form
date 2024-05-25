@@ -17,7 +17,7 @@ const hasNumber = (input) => {
 };
 
 const emptyFirstName = () => {
-  if (firstName.value.length === 0) {
+  if (firstName.value.trim().length === 0) {
     firstNameErr.style.display = "block";
     firstName.style.marginBottom = 0;
   } else if (hasNumber(firstName)) {
@@ -32,7 +32,7 @@ const emptyFirstName = () => {
 };
 
 const emptyLastName = () => {
-  if (lastName.value.length === 0) {
+  if (lastName.value.trim().length === 0) {
     lastNameErr.style.display = "block";
     lastName.style.marginBottom = 0;
   } else if (hasNumber(lastName)) {
@@ -69,7 +69,7 @@ const validateEnquiry = () => {
 };
 
 const validateMessageField = () => {
-  if (message.value.length === 0) {
+  if (message.value.trim().length === 0) {
     messageErr.style.display = "block";
     messageErr.style.marginBottom = "1.5rem";
     messageErr.style.marginTop = "-2.5rem";
