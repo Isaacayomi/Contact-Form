@@ -28,6 +28,7 @@ const emptyFirstName = () => {
     firstNameErr.style.display = "none";
     firstName.style.marginBottom = "1.5rem";
   }
+  return;
 };
 
 const emptyLastName = () => {
@@ -42,6 +43,7 @@ const emptyLastName = () => {
     lastNameErr.style.display = "none";
     lastName.style.marginBottom = "1.5rem";
   }
+  return;
 };
 
 const ValidateEmail = () => {
@@ -53,6 +55,7 @@ const ValidateEmail = () => {
     mailErr.style.display = "none";
     email.style.marginBottom = "1.5rem";
   }
+  return;
 };
 
 const validateEnquiry = () => {
@@ -62,6 +65,7 @@ const validateEnquiry = () => {
   } else {
     enquiryError.style.display = "none";
   }
+  return;
 };
 
 const validateMessageField = () => {
@@ -73,6 +77,7 @@ const validateMessageField = () => {
     messageErr.style.display = "none";
     messageErr.style.marginBottom = 0;
   }
+  return;
 };
 
 const validateCheckBox = () => {
@@ -82,15 +87,39 @@ const validateCheckBox = () => {
   } else {
     consentErr.style.display = "none";
   }
+  return;
 };
 
 const validateFields = () => {
+  let hasErrors = false;
+
   emptyFirstName();
   emptyLastName();
   ValidateEmail();
   validateEnquiry();
   validateMessageField();
   validateCheckBox();
+
+  if (
+    firstNameErr.style.display === "block" ||
+    lastNameErr.style.display === "block" ||
+    mailErr.style.display === "block" ||
+    enquiryError.style.display === "block" ||
+    messageErr.style.display === "block" ||
+    consentErr.style.display === "block"
+  ) {
+    hasErrors = true;
+  }
+
+  if (!hasErrors) {
+    document.querySelector(".toast").style.display = "block";
+
+    setTimeout(function () {
+      document.querySelector(".toast").style.display = "none";
+    }, 3000);
+  }
+
+  return hasErrors;
 };
 
 //Event Listeners
@@ -100,13 +129,5 @@ consent.addEventListener("click", () => {
 
 submit.addEventListener("click", function (e) {
   e.preventDefault();
-  if (validateFields) {
-    document.querySelector(".toast").style.display = "block";
-
-    // Remove toast after 5 seconds
-    setTimeout(function () {
-      document.querySelector(".toast").style.display = "none";
-
-    }, 3000);
-  }
+  validateFields();
 });
