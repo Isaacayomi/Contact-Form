@@ -207,6 +207,7 @@ input.submitBtn {
     width: 100%;
     margin-inline: auto;
     margin-block: 8rem;
+    padding-bottom: 2.5rem;
   }
 
   input#firstname,
@@ -229,5 +230,44 @@ input.submitBtn {
   input#email {
     max-width: 38.125rem;
     width: 100%;
+  }
+
+  .query__section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  label.enquiry {
+    padding-block: 0;
+  }
+
+  textarea {
+    max-width: 39.5rem;
+    width: 100%;
+    /* margin-inline: 2.5rem; */
+  }
+
+  .consent {
+    margin-top: -1.5rem;
+    /* margin-bottom: 1.5rem; */
+  }
+
+  .consent p {
+    max-width: 38.125rem;
+    width: 100%;
+  }
+
+  input.consent__check {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .submitBtn {
+    display: block;
+    max-width: 38.125rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-inline: auto;
   }
 }
