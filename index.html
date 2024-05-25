@@ -26,7 +26,7 @@
     <main>
       <h1 class="heading">Contact Us</h1>
 
-      <form>
+      <form name="myForm">
         <label for="firstname"
           >First Name
           <img src="./assets/images/Required.png" alt="asterick" />
@@ -73,20 +73,21 @@
             />
             Support Enquiry
           </label>
-          <p class="error__msg">Please select a query type</p>
+          <p class="error__msg enquiry__error">Please select a query type</p>
         </div>
 
         <label for="message"
           >Message
           <img src="./assets/images/Required.png" alt="asterick" />
         </label>
-        <textarea name="messageBox" class="messageInput" cols="30" rows="10"></textarea>
+        <textarea name="messageBox" class="message__input" cols="30" rows="10"></textarea>
+        <p class="error__msg message__error">This field is required</p>
         <div class="consent__section">
           <div class="consent">
-            <input type="checkbox" />
+            <input type="checkbox" class="consent__check" />
             <p>I consent to being contacted by the team</p>
           </div>
-          <p class="error__msg">
+          <p class="error__msg consent__error">
             To submit this form, please consent to being contacted
           </p>
         </div>

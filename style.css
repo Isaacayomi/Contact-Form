@@ -112,6 +112,10 @@ input.enquiry__input:focus {
   background-color: #e0f1e8;
 }
 
+.query__section {
+    margin-bottom: 1.5rem;
+}
+
 textarea {
   font-family: "Karla", sans-serif;
   white-space: normal;
