@@ -139,10 +139,11 @@ submit.addEventListener("click", function (e) {
     messageErr.style.display === "none" &&
     consentErr.style.display === "none"
   ) {
-    inputs.forEach(function (input) {
-      input.value = "";
+    for (let i = 0; i < inputs.length - 1; i++) {
+      inputs[i].value = "";
       document.querySelector("textarea").value = "";
-    });
+    }
+
     // Reset checkbox and radio inputs
     const enquiry = document.forms["myForm"]["enquiry"];
     for (let i = 0; i < enquiry.length; i++) {
