@@ -130,4 +130,24 @@ consent.addEventListener("click", () => {
 submit.addEventListener("click", function (e) {
   e.preventDefault();
   validateFields();
+
+  if (
+    firstNameErr.style.display === "none" &&
+    lastNameErr.style.display === "none" &&
+    mailErr.style.display === "none" &&
+    enquiryError.style.display === "none" &&
+    messageErr.style.display === "none" &&
+    consentErr.style.display === "none"
+  ) {
+    inputs.forEach(function (input) {
+      input.value = "";
+      document.querySelector("textarea").value = "";
+    });
+    // Reset checkbox and radio inputs
+    const enquiry = document.forms["myForm"]["enquiry"];
+    for (let i = 0; i < enquiry.length; i++) {
+      enquiry[i].checked = false;
+    }
+    consent.checked = false;
+  }
 });
