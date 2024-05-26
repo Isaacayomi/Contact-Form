@@ -27,19 +27,25 @@
       <h1 class="heading">Contact Us</h1>
 
       <form name="myForm">
-        <label for="firstname"
-          >First Name
-          <img src="./assets/images/Required.png" alt="asterick" />
-        </label>
-        <input type="name" id="firstname" name="firstname" />
-        <p class="error__msg firstname__error">This field is required</p>
+        <div class="name__field">
+          <div class="firstname__field">
+            <label for="firstname"
+              >First Name
+              <img src="./assets/images/Required.png" alt="asterick" />
+            </label>
+            <input type="name" id="firstname" name="firstname" />
+            <p class="error__msg firstname__error">This field is required</p>
+          </div>
 
-        <label for="lastname"
-          >Last Name
-          <img src="./assets/images/Required.png" alt="asterick" />
-        </label>
-        <input type="name" id="lastname" name="lastname" />
-        <p class="error__msg lastname__error">This field is required</p>
+          <div class="lastname__field">
+            <label for="lastname"
+              >Last Name
+              <img src="./assets/images/Required.png" alt="asterick" />
+            </label>
+            <input type="name" id="lastname" name="lastname" />
+            <p class="error__msg lastname__error">This field is required</p>
+          </div>
+        </div>
 
         <label for="email"
           >Email Address
@@ -112,7 +118,6 @@
         <p>Thanks for completing the form. We'll be in touch soon!</p>
       </div>
     </main>
-
 
     <script src="script.js"></script>
   </body>
